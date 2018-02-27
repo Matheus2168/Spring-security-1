@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h2> YOU HAVE TO PROVE THAT YOU ARE A MEMBER OF THE CITY OF LIGHT !</h2>
+<img src="/img/City_of_light.png"/>
+<form action="/login" method="post">
+    <br/>Login:<br/>
+    <input type="text" name="username"/>
+    <br/>Password:<br/>
+    <input type="password" name="password"/>
+    <br/>
+    <input type="hidden" th:name="${_csrf.getParameterName()}" th:value="${_csrf.getToken()}"/>
+    <input type="submit" value="STEP INTO"/>
+</form>
+
+</body>
+</html>
